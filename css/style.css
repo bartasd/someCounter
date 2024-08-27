@@ -1,0 +1,68 @@
+body,
+body * {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #777;
+  height: 100vh;
+}
+
+.container {
+  width: 500px;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 3px 3px white;
+  gap: 5px;
+}
+
+.container > p {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  color: green;
+  font-weight: bold;
+  font-size: 48px;
+  border-radius: 10px;
+  transform-style: preserve-3d;
+  transition: transform 0.25s;
+}
+
+.container > p.hidden {
+  display: none;
+}
+
+.container > p.done {
+  width: 350px;
+  font-size: 32px;
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(90deg);
+  }
+  50.01% {
+    transform: rotateX(-90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+.flip-animation {
+  animation: flip 1s ease-in-out forwards;
+}
