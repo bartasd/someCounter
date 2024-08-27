@@ -1,4 +1,13 @@
-const num = prompt("Please input a count: ");
+let num = prompt("Please input a count: ");
+while (true) {
+  const valid = !isNaN(num) && num % 1 === 0;
+  if (valid) break;
+  else {
+    num = prompt(
+      "A count should be a WHOLE NUMBER, YOU MORRON!!! Please try again..."
+    );
+  }
+}
 const numArr = [...(num + "")];
 const len = numArr.length;
 const container = document.getElementById("cont");
