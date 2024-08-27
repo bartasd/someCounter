@@ -1,7 +1,7 @@
 const num = prompt("Please input a count: ");
 const len = (num + "").length;
 const container = document.getElementById("cont");
-container.style.width = `${72.14 * len + 15}px`;
+container.style.width = `${73.67 * len + 15}px`;
 const numArr = [...(num + "")];
 
 for (let p = 0; p < len; p++) {
@@ -21,7 +21,7 @@ const myInterval = setInterval(changeCounter, 50);
 function changeCounter() {
   i--;
   const currWide = (i + "").length;
-  container.style.width = `${72.14 * currWide + 15}px`;
+  container.style.width = `${73.67 * currWide + 15}px`;
   const current = [...(i + "").padStart(len, "0")];
   for (let k = len - 1; k >= 0; k--) {
     const curr = current[k];
