@@ -1,6 +1,7 @@
 const num = prompt("Please input a count: ");
 const len = (num + "").length;
 const container = document.getElementById("cont");
+container.style.width = `${72.14 * len + 15}px`;
 const numArr = [...(num + "")];
 
 for (let p = 0; p < len; p++) {
