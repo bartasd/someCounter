@@ -1,8 +1,8 @@
 const num = prompt("Please input a count: ");
-const len = (num + "").length;
+const numArr = [...(num + "")];
+const len = numArr.length;
 const container = document.getElementById("cont");
 container.style.width = `${73.67 * len + 15}px`;
-const numArr = [...(num + "")];
 
 for (let p = 0; p < len; p++) {
   const pTag = document.createElement("p");
@@ -12,7 +12,6 @@ for (let p = 0; p < len; p++) {
 }
 
 const digits = container.getElementsByClassName("pnum");
-console.log(digits);
 
 let i = num;
 
@@ -20,9 +19,10 @@ const myInterval = setInterval(changeCounter, 50);
 
 function changeCounter() {
   i--;
-  const currWide = (i + "").length;
+  const currN = i + "";
+  const currWide = currN.length;
   container.style.width = `${73.67 * currWide + 15}px`;
-  const current = [...(i + "").padStart(len, "0")];
+  const current = [...currN.padStart(len, "0")];
   for (let k = len - 1; k >= 0; k--) {
     const curr = current[k];
     if (curr !== digits[k].innerText) {
